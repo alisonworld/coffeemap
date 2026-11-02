@@ -4,15 +4,15 @@
 
 ## 用 Android Studio 開啟
 
-1. 解壓 `HKCoffee-AndroidStudio.zip`。
-2. Android Studio → **Open** → 選取 `HKCoffee` 資料夾（內有 `settings.gradle.kts`），毋須另建專案。
+1. Clone 此 repository，或在 Android Studio 選 **Get from VCS**，輸入 `https://github.com/alisonworld/coffeemap.git`。
+2. Android Studio → **Open** → 選取 clone 後的 `coffeemap` 專案根目錄（內有 `settings.gradle.kts`），毋須另建專案。
 3. 等待 Gradle Sync；如提示下載 SDK，安裝 **Android SDK Platform 35** 和 Build Tools。
 4. Settings → Build, Execution, Deployment → Build Tools → Gradle → Gradle JDK，選 **JDK 17** 或相容的 Android Studio 內置 JDK。
 5. 選擇 Android 8.0 / API 26 或以上嘅模擬器或實機，按 **Run ▶**。
 
-首次 Gradle Sync 需要網絡下載依賴。App 首次啟動可離線讀取隨附店舖資料，無須 API key。ZIP 不包含電腦專用 `local.properties`，Android Studio 會設定本機 SDK 路徑。
+首次 Gradle Sync 需要網絡下載依賴。App 首次啟動可離線讀取隨附店舖資料，無須 API key。Repository 不包含電腦專用 `local.properties`，Android Studio 會設定本機 SDK 路徑。
 
-亦附有 `HKCoffee-debug.apk`，可安裝試用。這是開發測試簽署版本；Google Play 上架仍需正式簽署及發佈設定。
+可使用 Android Studio 編譯 APK；Google Play 上架仍需正式簽署及發佈設定。
 
 ## 已實作
 
@@ -77,7 +77,7 @@ SDK：min 26、compile / target 35；Kotlin 2.0.21、AGP 8.7.3、Gradle 8.9、Co
 macOS / Linux：
 
 ```sh
-./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+bash gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
 ```
 
 Windows：

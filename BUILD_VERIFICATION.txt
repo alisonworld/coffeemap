@@ -1,0 +1,32 @@
+港啡 HK Coffee — 驗證紀錄
+驗證日期：2026-10-26（香港）
+
+編譯：BUILD SUCCESSFUL
+指令：./gradlew :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+Java 17 / Gradle 8.9 / Android Gradle Plugin 8.7.3 / Kotlin 2.0.21
+單元測試：6 項，0 failures，0 errors。
+Android Lint：0 errors，5 個非阻擋警告（依賴版本更新及備份設定提示）。
+
+單元測試涵蓋：
+- 670 個唯一 OSM ID、18 區覆蓋與資料快照時間。
+- 中環、尖沙咀、長洲分區，排除深圳座標。
+- 多邊形內洞不當作區域。
+- 拒絕超時／不完整／空白資料回應。
+- 缺省資料、重複 ID、外地座標及非 cafe 篩選。
+- 中英文、多關鍵字、全形文字、Wi-Fi、收藏及到訪組合篩選。
+
+Android 15 / API 35 模擬器操作檢查：
+- 手機 1080×2400 與平板 2560×1600 畫面已視覺檢查。
+- 首次啟動離線可讀取 670 個店舖紀錄。
+- Wi-Fi 篩選顯示 43 個紀錄，地區篩選與搜尋正常。
+- 收藏、標記到訪、儲存筆記；強制停止及重新啟動後資料保留。
+- 私人新增 QA 店舖、搜尋及刪除成功；測試資料已清理。
+- 關閉模擬器網絡後，更新顯示連線失敗提示並保留 670 個紀錄。
+- 測試期間未發現此 app 的 AndroidRuntime crash。
+
+限制：
+公共 Overpass 服務在此環境回傳 HTTP 502，未驗證成功完成線上更新。
+資料匯入的解析、有效性檢查已以單元測試涵蓋；未對每間店舖實地核實。
+最低版本 API 26 已通過 Lint API 相容性檢查，未另於 Android 8 實機運行。
+APK 為 debug 測試簽署版本，未提交 Google Play。
+資料可能有漏收、重複或過時紀錄，並非完整全港名冊。

@@ -1,0 +1,11 @@
+Data: © OpenStreetMap contributors, licensed under ODbL 1.0.
+License: https://opendatacommons.org/licenses/odbl/1-0/
+Attribution: https://www.openstreetmap.org/copyright
+Source extract: https://download.geofabrik.de/asia/china/hong-kong-latest.osm.pbf
+Source database timestamp: 2026-10-25T21:21:21Z
+Retrieved: 2026-10-26 (Hong Kong)
+Filter: amenity=cafe, within one of 18 OSM admin_level=6 Hong Kong district boundaries.
+Way locations are the mean of member coordinates; relation cafes use an interior point.
+Deduplication: OSM element type + ID (does not conflate distinct OSM elements).
+Derived databases: app/src/main/assets/cafes.json and districts.json
+Reproduction: tools/build_snapshot.py with osmium + shapely.
