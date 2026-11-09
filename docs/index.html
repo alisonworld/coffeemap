@@ -144,7 +144,8 @@
         <h1 id="page-title">港啡<span>HK Coffee</span></h1>
         <p class="lead">一份可以離線睇嘅香港咖啡店圖鑑。由搜尋、收藏到 Android 真機測試，跟住呢份文件就可以開始。</p>
         <div class="actions">
-          <a class="button primary" href="#install">開始安裝 <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="https://github.com/alisonworld/coffeemap/releases/download/v1.0.0/app-release.apk">下載 Android APK <span aria-hidden="true">↓</span></a>
+          <a class="button" href="#install">安裝步驟 <span aria-hidden="true">↘</span></a>
           <a class="button" href="#features">探索功能 <span aria-hidden="true">↘</span></a>
         </div>
       </div>
@@ -176,9 +177,11 @@
       <h2 id="install-title">安裝與開發</h2>
       <div class="cards">
         <article class="card">
-          <h3>手動安裝測試 APK</h3>
+          <h3>安裝正式版 APK</h3>
+          <p><a class="button primary" href="https://github.com/alisonworld/coffeemap/releases/download/v1.0.0/app-release.apk">下載 v1.0.0 APK</a></p>
+          <p>已簽署安裝檔 · 約 10 MB · Android 8.0 或以上。下載時請登入有權限存取此 GitHub 專案嘅帳戶。</p>
           <ol>
-            <li>將已取得嘅測試 APK 傳到手機。</li>
+            <li>用 Android 手機開啟下載連結，儲存 <code>app-release.apk</code>。</li>
             <li>喺「檔案」App 開啟 APK。如果系統詢問，為開啟 APK 嘅 App 選「允許來自此來源」。</li>
             <li>撳「安裝」，完成後打開「港啡 HK Coffee」。</li>
           </ol>
@@ -233,6 +236,10 @@
       <details>
         <summary>Android Studio 裝置清單搵唔到手機</summary>
         <div><p>確認手機已解鎖、USB 偵錯已開啟，並已批准電腦偵錯。試重新插線，或者換一條可以傳輸資料嘅 USB 線。</p><p class="refs"><a href="https://developer.android.com/studio/run/device/#troubleshoot">Android Studio 裝置連線排查 ↗</a></p></div>
+      </details>
+      <details>
+        <summary>裝過 debug 版，正式版提示簽署不符</summary>
+        <div><p>呢個正式版同之前嘅 debug 版用咗唔同簽署。確認可以清除舊版嘅收藏、足跡同私人筆記後，再解除安裝 debug 版並安裝正式版。</p></div>
       </details>
       <details>
         <summary>Gradle Sync 提示缺少 SDK 或 Java</summary>
